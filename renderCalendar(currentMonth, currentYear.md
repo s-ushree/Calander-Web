@@ -1,0 +1,1 @@
+renderCalendar(currentMonth, currentYear);

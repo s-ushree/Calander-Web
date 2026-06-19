@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #b38add;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f8f8fa;
+}
+
+.calendar-columns {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.calendar-columns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.month-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.month-column .month {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.month-nav {
+    background: var(--primary-color, #b38add);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.month-nav:hover {
+    background: #8a5cc7;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    gap: 2px;
+    background: #222;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.calendar-grid .day-name,
+.calendar-grid .date-cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #222; /* Light black border */
+    box-sizing: border-box;
+}
+
+.calendar-grid .day-name {
+    background: #f5f5f5;
+    color: #878895;
+    font-weight: bold;
+}
+
+.calendar-grid .date-cell.prev-date,
+.calendar-grid .date-cell.next-date {
+    color: #b3b3b3;
+    background: #f5f5f5;
+}
+
+.calendar-grid .date-cell.today {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 0 8px 2px #b38add44;
+}
+
+.calendar-grid .date-cell.selected {
+    outline: 3px solid #b38add;
+    outline-offset: -3px;
+    box-shadow: 0 0 8px #b38add55;
+    z-index: 1;
+}
+
+.calendar-grid .date-cell.sunday {
+    background: #ff4d4d !important;
+    color: #fff !important;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.calendar-nav button {
+    padding: 6px 12px;
+    background: var(--primary-color, #b38add);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.calendar-nav button:hover {
+    background: #8a5cc7;
+}
+
+#current-month-year {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color, #b38add);
+}
+
+.date-cell span {
+    color: #111 !important; /* Black text */
+    font-weight: bold;
+}
+
+.date-cell.sunday span {
+    color: #fff !important; /* White text for contrast on red background */
+    font-weight: bold;
+}
