@@ -1,0 +1,4 @@
+-	Built a visually appealing and responsive calendar UI using HTML and CSS.
+-	Organized date elements in a grid-based layout for clear and intuitive viewing.
+-	Enhanced user experience through clean design, consistent styling, and proper alignment.
+-	Ensured cross-device compatibility using responsive design principles.
